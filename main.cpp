@@ -14,9 +14,11 @@
  * *********************************************************************************/
 
 #include <iostream>
-#include <cmath>
-
+#include <math.h>
+#include <pthread.h>
 #define THREADS 1
+#define PI 3.141592654
+#define RAD PI / 180
 using namespace std;
 
 struct Properties {
@@ -28,7 +30,6 @@ struct Properties {
     long velocidadFinalY = 0;
     long angulo = 0;
     long tiempo = 0;
-    long alcanceInicial = 0;
     long alcanceMaximo = 0;
     long alturaInicial = 0;
     long alturaMaxima = 0;
@@ -36,46 +37,43 @@ struct Properties {
 };
 
 void *velocidad(void *values){
-    cout<<"Rutina: Velocidad"<<endl;
     Properties * propertie;
     propertie = (Properties*)values;
-    propertie->velocidadInicialX = propertie->velocidad * cos(propertie->angulo);
-    propertie->velocidadInicialY = propertie->velocidad * sin(propertie->angulo);
-    propertie->velocidadFinalY = propertie->velocidadInicialY - propertie->gravedad * propertie->tiempo;
+    propertie->velocidadInicialX = propertie->velocidad * (cos(propertie->angulo * RAD));
+    propertie->velocidadInicialY = propertie->velocidad * (sin(propertie->angulo * RAD));
     propertie->velocidadFinalX = propertie->velocidadInicialX;
+    cout<<"Rutina: Velocidad"<<endl;
     cout<<"VelocidadInicialX: "<<propertie->velocidadInicialX<<endl;
     cout<<"VelocidadInicialY: "<<propertie->velocidadInicialY<<endl;
-    cout<<"Valor: ", +cos(5);
     cout<<"VelocidadFinalX: "<<propertie->velocidadFinalX<<endl;
+    cout<<""<<endl;
+    cout<<"Fin de subrutina"<<endl;
+    cout<<""<<endl;
+}
+void *tiempo(void *values){
+    Properties * propertie;
+    propertie = (Properties*)values;
+    propertie->tiempo = propertie->velocidadInicialY / propertie->gravedad;
+    propertie->velocidadFinalY = (propertie->velocidadInicialY) - (propertie->gravedad * propertie->tiempo);
+    cout<<"Rutina: Tiempo"<<endl;
+    cout<<"Tiempo: "<<propertie->tiempo<<endl;
     cout<<"VelocidadFinalY: "<<propertie->velocidadFinalY<<endl;
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
 }
-
-void *tiempo(void *values){
-    cout<<"Rutina: Tiempo"<<endl;
-    Properties * propertie;
-    propertie = (Properties*)values;
-    propertie->tiempo = propertie->velocidadInicialY/propertie->gravedad;
-    cout<<"Tiempo: "<<propertie->tiempo;
-    cout<<""<<endl;
-    cout<<"Fin de subrutina"<<endl;
-    cout<<""<<endl;
-}
 void *alcance(void *values){
-    cout<<"Rutina: Alcance"<<endl;
     Properties * propertie;
     propertie = (Properties*)values;
-    propertie->alcanceMaximo = (pow((propertie->velocidad),2)*sin(2*(propertie->angulo)))/propertie->gravedad;
-    propertie->alturaMaxima = (pow(propertie->velocidad,2)* pow(sin(propertie->angulo),2))/(2*propertie->gravedad);
+    propertie->alcanceMaximo = ((pow(propertie->velocidad,2))/propertie->gravedad) * (sin(2 * (propertie->angulo * RAD)));
+    propertie->alturaMaxima = (pow((propertie->velocidad * sin(propertie->angulo * RAD)),2))/ (2 * propertie->gravedad);
+    cout<<"Rutina: Alcance"<<endl;
     cout<<"Alcance Maximo: "<<propertie->alcanceMaximo<<endl;
     cout<<"Altura Maxina: "<<propertie->alturaMaxima  <<endl;
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
 }
-
 
 int main() {
     Properties properties;
@@ -90,13 +88,11 @@ int main() {
     pthread_attr_t attr;
     pthread_attr_init(&attr);
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
-    pthread_create(&th,&attr,velocidad,(void *)&properties);
-    pthread_create(&th,&attr,alcance,(void *)&properties);
-    pthread_create(&th,&attr,tiempo,(void *)&properties);
-
-    //for (int i = 0; i = THREADS;i++ ){
-    //    pthread_join(th, NULL);
-    //}
-
+    for(int i=0; i<THREADS; i++){
+        pthread_create(&th,&attr,velocidad,(void *)&properties);
+        pthread_create(&th,&attr,alcance,(void *)&properties);
+        pthread_create(&th,&attr,tiempo,(void *)&properties);
+        pthread_join(th, NULL);
+    }
     return 0;
 }
