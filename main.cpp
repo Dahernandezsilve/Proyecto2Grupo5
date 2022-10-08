@@ -24,9 +24,8 @@ using namespace std;
 struct Properties {
     long velocidad = 0;
     long distancia = 0;
-    long velocidadInicialX = 0;
+    long velocidadX = 0;
     long velocidadInicialY = 0;
-    long velocidadFinalX = 0;
     long velocidadFinalY = 0;
     long angulo = 0;
     long tiempo = 0;
@@ -39,17 +38,17 @@ struct Properties {
 void *velocidad(void *values){
     Properties * propertie;
     propertie = (Properties*)values;
-    propertie->velocidadInicialX = propertie->velocidad * (cos(propertie->angulo * RAD));
+    propertie->velocidadX= propertie->velocidad * (cos(propertie->angulo * RAD));
     propertie->velocidadInicialY = propertie->velocidad * (sin(propertie->angulo * RAD));
-    propertie->velocidadFinalX = propertie->velocidadInicialX;
     cout<<"Rutina: Velocidad"<<endl;
-    cout<<"VelocidadInicialX: "<<propertie->velocidadInicialX<<endl;
+    cout<<"VelocidadX: "<<propertie->velocidadX<<endl;
     cout<<"VelocidadInicialY: "<<propertie->velocidadInicialY<<endl;
-    cout<<"VelocidadFinalX: "<<propertie->velocidadFinalX<<endl;
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
+    pthread_exit(NULL);
 }
+
 void *tiempo(void *values){
     Properties * propertie;
     propertie = (Properties*)values;
@@ -61,6 +60,7 @@ void *tiempo(void *values){
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
+    pthread_exit(NULL);
 }
 void *alcance(void *values){
     Properties * propertie;
@@ -73,15 +73,17 @@ void *alcance(void *values){
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
+    pthread_exit(NULL);
 }
 
 int main() {
+    fflush(NULL);
     Properties properties;
     cout<<"---------------------------------- Simulador de fenomenos fisicos ----------------------------------"<<endl;
-    cout<<"| Este programa le permitira observar el comportamiento del tiro parabolico.                       |"<<endl;
-    cout<<"| Para comenzar, ingrese el valor de velocidad inicial al que desea lanzar su objeto:              |"<<endl;
+    cout<<"Este programa le permitira observar el comportamiento del tiro parabolico.                       "<<endl;
+    cout<<"Para comenzar, ingrese el valor de velocidad inicial al que desea lanzar su objeto:              "<<endl;
     cin>>properties.velocidad;
-    cout<<"| A que angulo desea lanzar su objeto:                                                             |"<<endl;
+    cout<<"A que angulo desea lanzar su objeto:                                                             "<<endl;
     cin>>properties.angulo;
 
     pthread_t th;
@@ -89,10 +91,16 @@ int main() {
     pthread_attr_init(&attr);
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
     for(int i=0; i<THREADS; i++){
+
         pthread_create(&th,&attr,velocidad,(void *)&properties);
-        pthread_create(&th,&attr,alcance,(void *)&properties);
         pthread_create(&th,&attr,tiempo,(void *)&properties);
+        pthread_create(&th,&attr,alcance,(void *)&properties);
         pthread_join(th, NULL);
     }
+    for(int i=0;i<THREADS; i++){
+
+    }
+
+    pthread_attr_destroy(&attr);
     return 0;
 }
