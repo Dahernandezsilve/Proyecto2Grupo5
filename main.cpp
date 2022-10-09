@@ -31,6 +31,7 @@ pthread_mutex_t controlVelocityTab;
 struct Properties {
     long velocidad = 0;
     long velocidadTemRealY=0;
+    long velocidadTemReal=0;
     long distanciax = 0;
     long altura=0;
     long velocidadInicialX = 0;
@@ -58,7 +59,9 @@ void *velocidad(void *values){
     while (propertie->velocidadTemRealY!=propertie->velocidadFinalY){
         pthread_barrier_wait(&barreraTiempo);
         propertie->velocidadTemRealY=propertie->velocidadInicialY-(propertie->gravedad*propertie->tiempoReal);
-        cout<<"Velocidad instantanea: "<<propertie->velocidadTemRealY<<endl;
+        cout<<"Velocidad instantanea: "<<propertie->velocidadTemRealY<<" m/s"<<endl;
+        propertie->velocidadTemReal = sqrt(pow(propertie->velocidadTemRealY,2) + pow(propertie->velocidadInicialX,2));
+        cout<<"Velocidad general: "<<propertie->velocidadTemReal<<" m/s"<<endl;
         /*pthread_mutex_lock(&controlVelocityTab);
         if(propertie->velocidadTemRealY/10 >propertie->tableVelocity.size()){
             int o = propertie->tableVelocity.size();
@@ -80,9 +83,9 @@ void *velocidad(void *values){
         cout<<propertie->tableVelocity[i]<<endl;
     }
     cout<<"Rutina: Velocidad"<<endl;
-    cout<<"VelocidadInicialX: "<<propertie->velocidadInicialX<<endl;
-    cout<<"VelocidadInicialY: "<<propertie->velocidadInicialY<<endl;
-    cout<<"VelocidadFinalX: "<<propertie->velocidadFinalX<<endl;
+    cout<<"VelocidadInicialX: "<<propertie->velocidadInicialX<<" m/s"<<endl;
+    cout<<"VelocidadInicialY: "<<propertie->velocidadInicialY<<" m/s"<<endl;
+    cout<<"VelocidadFinalX: "<<propertie->velocidadFinalX<<" m/s"<<endl;
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
@@ -95,9 +98,10 @@ void *tiempo(void *values){
     while (propertie->tiempoReal<propertie->tiempo){
         propertie->tiempoReal++;
 
+
         sleep(1);
         pthread_barrier_wait(&barreraTiempo);
-        cout<<"tiempo en este instante: "<<propertie->tiempoReal<<endl;
+        cout<<"tiempo en este instante: "<<propertie->tiempoReal<<" segundos"<<endl;
         pthread_mutex_lock(&controlVelocityTab);
         for(auto i=0; i<propertie->tableVelocity.size();i++){
             if(i==0){
@@ -111,8 +115,8 @@ void *tiempo(void *values){
 
     }
     cout<<"Rutina: Tiempo"<<endl;
-    cout<<"Tiempo: "<<propertie->tiempo<<endl;
-    cout<<"VelocidadFinalY: "<<propertie->velocidadFinalY<<endl;
+    cout<<"Tiempo: "<<propertie->tiempo<<" segundos"<<endl;
+    cout<<"VelocidadFinalY: "<<propertie->velocidadFinalY<<" m/s"<<endl;
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
@@ -149,8 +153,8 @@ void *alcance(void *values){
 
     }
     cout<<"Rutina: Alcance"<<endl;
-    cout<<"Alcance Maximo: "<<propertie->alcanceMaximo<<endl;
-    cout<<"Altura Maxina: "<<propertie->alturaMaxima  <<endl;
+    cout<<"Alcance Maximo: "<<propertie->alcanceMaximo<<" metros"<<endl;
+    cout<<"Altura Maxina: "<<propertie->alturaMaxima  <<" metros"<<endl;
     cout<<""<<endl;
     cout<<"Fin de subrutina"<<endl;
     cout<<""<<endl;
@@ -165,7 +169,7 @@ int main() {
     cout<<"| Este programa le permitira observar el comportamiento del tiro parabolico.                       |"<<endl;
     cout<<"| Para comenzar, ingrese el valor de velocidad inicial al que desea lanzar su objeto:              |"<<endl;
     cin>>properties.velocidad;
-    cout<<"| A que angulo desea lanzar su objeto:                                                             |"<<endl;
+    cout<<"| A que angulo desea lanzar su objeto?:                                                             |"<<endl;
     cin>>properties.angulo;
 
     pthread_t th;
