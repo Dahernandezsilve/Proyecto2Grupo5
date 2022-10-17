@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Micro/Proyecto2Grupo5/main.cpp" "CMakeFiles/Proyecto2Grupo5.dir/main.cpp.obj" "gcc" "CMakeFiles/Proyecto2Grupo5.dir/main.cpp.obj.d"
+  "C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/main.cpp" "CMakeFiles/Proyecto2Grupo5.dir/main.cpp.obj" "gcc" "CMakeFiles/Proyecto2Grupo5.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

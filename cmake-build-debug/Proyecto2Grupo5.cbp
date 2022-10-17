@@ -8,84 +8,82 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Micro/Proyecto2Grupo5/cmake-build-debug"/>
+				<Option working_dir="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto2Grupo5">
-				<Option output="C:/Micro/Proyecto2Grupo5/cmake-build-debug/Proyecto2Grupo5.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Micro/Proyecto2Grupo5/cmake-build-debug"/>
+				<Option output="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Proyecto2Grupo5.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto2Grupo5"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto2Grupo5"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto2Grupo5/fast">
-				<Option output="C:/Micro/Proyecto2Grupo5/cmake-build-debug/Proyecto2Grupo5.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Micro/Proyecto2Grupo5/cmake-build-debug"/>
+				<Option output="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Proyecto2Grupo5.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto2Grupo5/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto2Grupo5/fast"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Micro/Proyecto2Grupo5/cmake-build-debug"/>
+				<Option working_dir="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Micro/Proyecto2Grupo5/cmake-build-debug"/>
+				<Option working_dir="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Micro/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Micro/Proyecto2Grupo5/main.cpp">
+		<Unit filename="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/main.cpp">
 			<Option target="Proyecto2Grupo5"/>
 		</Unit>
-		<Unit filename="C:/Micro/Proyecto2Grupo5/CMakeLists.txt">
+		<Unit filename="C:/Users/danar/Desktop/Proyectos/MicroProcess/Proyecto2Grupo5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
